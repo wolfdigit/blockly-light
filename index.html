@@ -43,13 +43,13 @@
         }
     </script>
   <div id="main" style="width:100%; height:auto; position:absolute; top:20px; bottom:0">
-    <div id="blocklyDiv" style="height:100%; width: 95%;"></div>
-    <div style="height:100%; width:3em">
-        <button id="upload" style="position:absolute; margin:auto; top:0; height:3em; width:3em" onclick="javascript:uploadColorCode();">上傳</button>
+    <div id="blocklyDiv" style="height:100%; width: 100%;"></div>
+    <button id="upload" style="position:fixed; margin:auto; top:0; right:0; height:3em; width:5em; border-radius:0.5em" onclick="javascript:uploadColorCode();">上傳</button>
+    <div style="height:100%; width:1%; display:none">
         <button id="import" style="position:absolute; margin:auto; bottom:0; height:3em; width:3em" onclick="javascript:Blockly.Xml.domToWorkspace(Blockly.Xml.textToDom(document.getElementById('msg').value), workspace);">&lt;</button>
     </div>
-    <pre style="height:90%; width: 1%; position:absolute; top:0" oncopy="return dontcopy()" oncut="return dontcopy()" onpaste="return dontcopy()"><code id="c_code" class="cpp"></code></pre>
-    <textarea id="msg" style="height:5%; width: 1%; position:absolute; bottom:0"></textarea>
+    <pre style="height:90%; width: 1%; position:absolute; top:0; display:none" oncopy="return dontcopy()" oncut="return dontcopy()" onpaste="return dontcopy()"><code id="c_code" class="cpp"></code></pre>
+    <textarea id="msg" style="height:5%; width: 1%; position:absolute; bottom:0; display:none"></textarea>
   </div>
 
   <xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
